@@ -92,7 +92,7 @@ export class BoardArticleResolver {
 	@UseGuards(RolesGuard)
 	@Mutation((returns) => BoardArticle)
 	public async removeBoardArticleByAdmin(
-		@Args('propertyId') input: string,
+		@Args('articleId') input: string,
 		@AuthMember('_id') memberId: ObjectId,
 	): Promise<BoardArticle> {
 		console.log('Mutation: removeBoardArticleByAdmin');
